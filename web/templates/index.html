@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T Cell Activation Model</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>T Cell Activation Simulation</h1>
+
+    <!-- Model Summary Section -->
+    <div id="modelSummary">
+        <h2>About This Model</h2>
+        <p>
+            This simulation models the activation of <strong>CD4+ Helper T Cells</strong> and <strong>CD8+ Cytotoxic T Cells</strong>, 
+            their regulation via <strong>IL-2 cytokine feedback</strong>, and suppression by <strong>Regulatory T Cells (Tregs)</strong>.
+            The goal is to understand how immune responses vary in <strong>healthy vs. dysregulated states</strong>.
+        </p>
+    </div>
+
+    <!-- Simulation Controls -->
+    <h2>Adjust Simulation Parameters</h2>
+    
+    <!-- APC Signal Strength -->
+    <label for="apcStrength">APC Signal Strength:</label>
+    <input type="range" id="apcStrength" min="0.1" max="2.0" step="0.1" value="1.0">
+    <span id="apcValue">1.0</span>
+    
+    <!-- Treg Suppression Factor -->
+    <label for="tregFactor">Treg Suppression Factor:</label>
+    <input type="range" id="tregFactor" min="0.0" max="1.0" step="0.1" value="0.5">
+    <span id="tregValue">0.5</span>
+    
+    <!-- IFN-γ Presence -->
+    <label for="ifngamma">Include IFN-γ?</label>
+    <select id="ifngamma">
+        <option value="yes">Yes</option>
+        <option value="no" selected>No</option>
+    </select>
+    
+    <button id="runSimulation">Run Simulation</button>
+
+    <!-- Display Results -->
+    <div id="results">
+        <p><strong>Active Cells:</strong> <span id="activeCells">--</span></p>
+        <p><strong>Average Cytokine Level:</strong> <span id="cytokineLevel">--</span></p>
+    </div>
+
+    <!-- ODE Model Results -->
+    <h2>ODE Model Results</h2>
+    <p>This plot shows the changes in <strong>CD4+, CD8+, IL-2, and Treg concentrations</strong> over time.</p>
+    <img id="odePlot" src="" alt="ODE Model Plot">
+
+    <!-- Agent-Based Model Results -->
+    <h2>Agent-Based Model Results</h2>
+    <p>
+        The agent-based model simulates <strong>individual T cells interacting with APC signals</strong>.
+        It shows how many cells <strong>activate</strong> and the level of <strong>cytokine response</strong>.
+    </p>
+    <img id="agentPlot" src="" alt="Agent-Based Model Plot">
+
+    <!-- New Visualizations -->
+
+    <!-- IL-2 & IFN-γ Heatmap -->
+    <h2>IL-2 and IFN-γ Heatmap</h2>
+    <p>This heatmap visualizes the dynamic concentration of IL-2 and IFN-γ over time.</p>
+    <img id="heatmapPlot" src="" alt="Cytokine Heatmap">
+
+    <!-- T Cell Population Dynamics (Sankey Diagram) -->
+    <h2>T Cell Population Dynamics</h2>
+    <p>
+        This Sankey diagram illustrates the differentiation of T cells:
+        <strong>Naïve → Activated → Effector or Memory Cells</strong>.
+    </p>
+    <img id="sankeyPlot" src="" alt="T Cell Differentiation Sankey Diagram">
+
+    <!-- Healthy vs. Dysregulated Activation Overlay -->
+    <h2>Healthy vs. Dysregulated T Cell Activation</h2>
+    <p>
+        This overlay compares normal vs. excessive immune responses, highlighting T cell activation differences.
+    </p>
+    <img id="overlayPlot" src="" alt="Overlay Activation Comparison">
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

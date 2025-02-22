@@ -1,0 +1,92 @@
+/* styles.css - Styling for the T Cell Activation Model Web Interface */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Results Section */
+#results p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Images (Graphs) */
+img {
+    width: 60%;
+    border: 2px solid #ddd;
+    padding: 5px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+/* Interactive Input Controls */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+input[type="range"] {
+    width: 300px;
+    margin: 10px;
+}
+
+span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Dropdown Styling */
+select {
+    font-size: 16px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* Improved Layout for Visualization */
+#visualization-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#visualization-container img {
+    width: 80%;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+/* Enhancing the About Section */
+#modelSummary {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin: 0 auto 20px;
+}

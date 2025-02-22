@@ -1,0 +1,25 @@
+# requirements.txt - Dependencies for T Cell Activation Model
+
+# Core scientific computing libraries
+numpy>=1.21.0  # Numerical computations
+scipy>=1.7.0   # Scientific computing and ODE solver
+
+# Data visualization
+matplotlib>=3.4.0  # Plotting library
+seaborn>=0.11.0   # Statistical data visualization
+
+# Additional utilities
+pandas>=1.3.0  # Data handling and manipulation
+tqdm>=4.62.0   # Progress bar for loops
+
+# Environment management
+python-dotenv>=0.19.0  # Manage environment variables
+
+# Web framework for API
+fastapi>=0.70.0  # FastAPI for serving results
+uvicorn>=0.15.0  # ASGI server to run FastAPI
+
+# Code formatting and linting (optional, but recommended for development)
+black>=22.0  # Code formatter
+flake8>=4.0.0  # Linter for Python code
+
